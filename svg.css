@@ -1,0 +1,30 @@
+header {
+  background-color: aqua;
+}
+.indhold {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.indhold img {
+  width: 65%;
+}
+
+.interaktiv {
+  width: 35%;
+  border: solid 2px gray;
+  padding-left: 10px;
+}
+.overskrifter {
+  border: solid 1px black;
+  padding: 5px;
+}
+.interaktiv details {
+  border: 2px solid lightgray;
+  padding: 10px;
+  margin: 15px;
+}
+footer {
+  background-color: aqua;
+}
