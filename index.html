@@ -4,7 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Høstgården</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Labrada:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,27 +17,146 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Høstgården</a>
+      <img src="billeder/eventsitelogo.svg" alt="Høstgårdens logo" class="header-logo">
       <nav class="site-nav">
         <button>Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
+          <li><a href="./svg.html">Kort</a></li>
           <li><a href="./form.html">Formular</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="hero">
+      <div class="hero-indhold">
+        <h1>Sæsonernes gårdevent</h1>
+        <h2>Velkommen til Høstgården</h2>
+        <p>Hos Høstgården følger vi årstiderne. Høst friske råvarer, tilbered mad fra jord til bord og
+          nyd hyggelige stunder i naturskønne omgivelser. En oplevelse, der rummer nærvær, fællesskab og ro.</p>
+      </div>
+    </section>
+
+    <section class="intro">
+      <img src="/billeder/hostimg.jpg" alt="">
+      <div>
+        <h2>Fra jord til bord</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dolorum natus illo sit, doloremque ullam
+          est sint possimus nemo et velit, quae, omnis sapiente dolorem? Eveniet dicta provident adipisci culpa!</p>
+      </div>
+    </section>
+
+    <section class="eventyr">
+      <div>
+        <h2>Vil du forlænge dit ophold?</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa dicta provident quia repellat iste. Magni
+          velit magnam dicta. Quo alias quidem quisquam iure ad? Cum dolorum similique nostrum fugit reiciendis!</p>
+      </div>
+      <img src="/billeder/sovimg.png" alt="">
+    </section>
+
+    <section class="måltid">
+      <div class="måltid-tekst">
+        <h2>Mere end bare et måltid</h2>
+        <hr>
+        <p>Et måltid handler om mere end det, der ligger på tallerkenen. Det handler om at samles, dele gode
+          oplevelser og nyde
+          tiden sammen.</p>
+      </div>
+    </section>
+
+    <section class="popupelementer">
+      <div class="popup-figurer">
+
+        <button type="button" popovertarget="popup-host">
+          <img src="/billeder/høst.svg" alt="Høst">
+          <p>Udforsk høsten</p>
+        </button>
+
+        <div id="popup-host" popover>
+          <h2>Høst</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio modi ipsa possimus, iusto, culpa vitae
+            voluptas asperiores vero reiciendis illum adipisci sapiente eius sequi suscipit.</p>
+          <img src="/billeder/hostimg.jpg" alt="">
+        </div>
+
+        <button type="button" popovertarget="popup-spis">
+          <img src="/billeder/spis.svg" alt="spis">
+          <p>Smag på gården</p>
+        </button>
+
+        <div id="popup-spis" popover>
+          <h2>Spis</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto porro officia, quo, aperiam tempora
+            saepe facilis laudantium autem incidunt quisquam fugiat.</p>
+          <img src="billeder/spisimg.jpg" alt="Spis">
+        </div>
+
+        <button type="button" popovertarget="popup-sov">
+          <img src="/billeder/sov.svg" alt="Sov">
+          <p>Oplev en Overnatning</p>
+        </button>
+
+        <div id="popup-sov" popover>
+          <h2>Sov</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nihil possimus nostrum vel sit
+            magni adipisci, impedit tempore dolores ab eos iste beatae dolore libero, id ea sed atque? Eos.</p>
+          <img src="billeder/sovimg.png" alt="">
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="planlæg-besøg">
+      <div class="planlæg-tekst">
+        <h2>Planlæg dit besøg</h2>
+        <p>Herunder kan du se en oversigt over Høstgården,
+          og se vores forskellige faciliteter og aktiviteter.
+        </p>
+        <a href="#" class="knap">Find rundt på gården</a>
+
+        <p class="velkommen">
+          Vi glæder os til at byde dig velkommen!
+        </p>
+      </div>
+
+      <img class="nederstebillede" src="billeder/nederstebillede.jpg" alt="hovedhuset">
+    </section>
+  </main>
 
   <footer class="site-footer">
+
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+
+      <div class="footer-logo">
+        <h2>Høstgården</h2>
+        <img src="billeder/eventsitelogo.svg" alt="">
+      </div>
+
+      <div class="footer-kontakt">
+        <h3>Kontakt</h3>
+        <p>kontakt@hoestgaarden.dk</p>
+        <p>Telefon: 12 34 56 78</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Find rundt</h3>
+        <a href="#oplevelsen">Oplevelsen</a>
+        <a href="#ophold">Weekendophold</a>
+      </div>
+
     </div>
-  </footer>
-  <script src="./script.js"></script>
+
+    <div class="footer-bottom">
+      <p>2026 Høstgården</p>
+    </div>
+
+  </footer <script src="./script.js">
+  </script>
 </body>
 
 </html>
