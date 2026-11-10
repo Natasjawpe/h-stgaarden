@@ -23,9 +23,77 @@ body {
   grid-template-columns: minmax(1rlh, 1fr) minmax(0, 75rem) minmax(1rlh, 1fr);
 }
 
-h1,
-h2,
+.hero {
+  background-image: url(billeder/høstgården.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  grid-column: 1 / -1;
+  display: grid;
+  place-items: center;
+  margin-bottom: 3%;
+  position: relative;
+  place-items: center;
+}
+.oplevelsen,
+.weekendophold {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f3ebdd;
+}
+
+.oplevelsen {
+  display: grid;
+  grid-template-columns: 1fr fr;
+  gap: 3rem;
+  padding: 3rem 5%;
+  align-items: center;
+  padding-bottom: 0;
+  background-color: #f5eee3;
+}
+.oplevelsen > img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.oplevelse-tekst {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  align-content: center;
+}
+section.weekendophold {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 5%;
+  box-sizing: border-box;
+  background-color: #f5eee3;
+}
+
+section.weekendophold .weekend-tekst {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  align-content: center;
+}
+section.weekendophold img {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
 h3,
+h2,
 p {
   margin: 0;
 }
@@ -40,6 +108,9 @@ main {
 main > * {
   grid-column: 2;
   padding-block: var(--space-3);
+}
+main > section {
+  grid-column: 1 / -1;
 }
 
 .svg-page {
@@ -131,7 +202,7 @@ main > * {
 }
 
 .header-content {
-  min-height: 4rem;
+  min-height: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,6 +213,23 @@ main > * {
   color: inherit;
   font-weight: 700;
   text-decoration: none;
+  font-size: 2rem;
+  position: absolute;
+  left: 2rem;
+}
+
+.header-logo {
+  width: 330px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 25px;
+}
+
+.header-content nav {
+  margin-left: auto;
+  margin-right: -16rem;
 }
 
 .footer-content {
@@ -192,6 +280,7 @@ main > * {
   color: inherit;
   text-decoration: none;
   border-bottom: 2px solid #0000;
+  font-size: 1rem;
 }
 
 .menu a[aria-current="page"] {
@@ -250,4 +339,426 @@ main > * {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+.site-header {
+  background-color: #f5eee3;
+  height: 130px;
+}
+
+.header-content {
+  min-height: 4.5rem;
+  padding: 0 2rem;
+}
+
+.site-logo {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #303b17;
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+  max-width: 750px;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  justify-self: center;
+}
+
+.hero-text h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: normal;
+  margin: 0;
+}
+
+.hero-text h2 {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.hero-text p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-buttons a {
+  display: inline-block;
+  min-width: 190px;
+  box-sizing: border-box;
+  padding: 0.9rem 1.8rem;
+  background-color: #303b17;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero-buttons .knap {
+  margin-top: 0;
+}
+
+.hero-buttons a:hover {
+  background-color: #46552a;
+}
+
+.knap {
+  display: inline-block;
+  background-color: #303b17;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #303b17;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.knap:hover {
+  background-color: #46552a;
+}
+.aktiviteter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.aktivitet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+.aktivitet img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+.aktivitet p {
+  margin: 0;
+}
+
+[popover] {
+  margin: 0;
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #f5eee3;
+  color: #222;
+  max-width: 400px;
+  box-shadow: 0 4px 20px #0003;
+}
+
+[popover] img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 1rem;
+}
+
+[popover] h2 {
+  margin-bottom: 1rem;
+}
+
+[popover] p {
+  line-height: 1.5;
+}
+
+.måltid {
+  background-image: url("billeder/langbord.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  box-sizing: border-box;
+  padding-top: 0;
+}
+
+.måltid h2 {
+  max-width: 500px;
+  font-family: cactus classical serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.måltid-tekst {
+  text-align: center;
+  max-width: 500px;
+  margin-left: 3rem;
+}
+
+.måltid-tekst p {
+  font-size: italic;
+  margin: 3rem;
+}
+
+.måltid-tekst hr {
+  display: block;
+  width: 90px;
+  margin: 1rem auto 0.5rem;
+}
+
+.planlæg-besøg {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5.5rem;
+  align-items: center;
+  padding: 3rem 5%;
+  background-color: #f5eee3;
+  width: 100%;
+  min-width: 0;
+  grid-column: 1 /-1;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+.planlæg-besøg img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 35px;
+}
+
+.planlæg-tekst {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.velkommen {
+  font-family: cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.planlæg-tekst h2 {
+  white-space: nowrap;
+}
+
+.planlæg-tekst .knap {
+  width: fit-content;
+}
+
+.site-footer {
+  background-color: #87916b;
+  color: #f5eee3;
+  padding: 3rem 6% 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.footer-content {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2rem;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  align-items: center;
+}
+
+.footer-logo h2 {
+  font-family: Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  color: #f5eee3;
+}
+.footer-logo p {
+  margin: 0;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.footer-content h3 {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  color: #f5eee3;
+}
+
+.footer-content p {
+  line-height: 1.8;
+  margin: 0 0 0.3rem;
+}
+
+.footer-content a {
+  display: block;
+  color: #f5eee3;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+}
+
+.footer-logo h2 {
+  color: #f5eee3;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.site-footer,
+.site-footer h2,
+.site-footer h3,
+.site-footer p,
+.site-footer a {
+  color: #f5eee3;
+}
+
+.footer-bottom {
+  max-width: 90rem;
+  width: 100%;
+  margin: 3rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid #c4c99a;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.site-footer hr {
+  display: none;
+}
+
+.oplevelsen,
+.weekendophold,
+.planlæg-besøg {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: auto;
+}
+
+.footer-logo img {
+  width: 310px;
+  height: 190px;
+  object-fit: contain;
+  border-radius: 20px;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 2rem;
+  margin-left: 0;
+}
+
+.footer-brand-text {
+  display: grid;
+  gap: 0.8rem;
+  align-content: center;
+}
+
+.footer-brand-text h2 {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand-text p {
+  white-space: nowrap;
+  margin: 0;
+}
+.footer-kontakt,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-kontakt h3,
+.footer-links h3 {
+  margin-bottom: 1.2rem;
+}
+
+.footer-kontakt p,
+.footer-links a {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+button[popovertarget="pop-host"] {
+  anchor-name: --host;
+}
+
+#pop-host {
+  position: fixed;
+  position-anchor: --host;
+  position-area: top;
+  margin: 0;
+}
+
+button[popovertarget="pop-spis"] {
+  anchor-name: --spis;
+}
+
+#pop-spis {
+  position: fixed;
+  position-anchor: --spis;
+  position-area: top;
+  margin: 0;
+}
+
+button[popovertarget="pop-sov"] {
+  anchor-name: --sov;
+}
+
+#pop-sov {
+  position: fixed;
+  position-anchor: --sov;
+  position-area: top;
+  margin: 0;
 }
