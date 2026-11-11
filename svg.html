@@ -4,47 +4,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SVG</title>
+  <title>Find rundt på gården</title>
   <link rel="stylesheet" href="svg.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="svg.js" defer></script>
 </head>
 
 <body>
   <header>
-    <p>global menu</p>
+    <div class="header-content">
+      <a class="site-logo" href="./">Høstgården</a>
+      <img src="billeder/eventsite_logo_2.svg" alt="logo" class="header-logo">
+      <nav class="site-nav">
+        <ul class="menu">
+          <li><a href="./" aria-current="page">Forside</a></li>
+          <li><a href="#oplevelsen">Oplevelsen</a></li>
+          <li><a href="#ophold">Ophold</a></li>
+          <li><a href="#praktisk-info">Praktisk info</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
     <h2>Find rundt på gården</h2>
-    <h3>Udforsk gårdens mange oplevelser – fra friske råvarer og hyggelige gårdomgivelser til overnatning og lokale
-      specialiteter.</h3>
+    <p>Udforsk vores gård, og gå på opdagelse blandt de mange oplevelser, vi har at byde på. Fra høst af sæsonens
+      råvarer til hyggelig overnatning og livet på landet.</p>
     <div class="indhold">
-      <img src="img/svg.png" alt="svg af høstgarden" />
-      <div class="interaktiv">
-        <details name="overskrifter">
-          <summary>Høst eventet</summary>
+      <img src="svg illu/kort.svg" alt="svg af høstgarden" />
+      <img src="svg illu/figur.svg" alt="figur" class="figur">
+      <div class="accordions">
+        <details name="gaard" data-x="30" data-y="45">
+          <summary>Høst</summary>
           <div>
-            <p>Kom med ud på marken, hvor vi sammen høster friske, sæsonaktuelle råvarer. Efterfølgende samles vi i
-              køkkenet og tilbereder et lækkert måltid med dagens høst.</p>
+            <p>Udforsk vores plantager, hvor du kan gå på opdagelse blandt sæsonens frugter og grøntsager og selv høste
+              friske råvarer.</p>
           </div>
         </details>
-        <details name="overskrifter">
+        <details name="gaard" data-x="59" data-y="34">
+          <summary>Reception og hovedhuset</summary>
+          <div>
+            <p>I hovedhuset finder du receptionen, hvor du kan få hjælp og information. Her samles vi også i køkkenet
+              for at tilberede lækre måltider af gårdens råvarer.</p>
+          </div>
+        </details>
+        <details name="gaard" data-x="77" data-y="56">
           <summary>Overnatning på gården</summary>
           <div>
             <p>Forlæng oplevelsen med en hyggelig overnatning i vores glampingområde. Vågn op til rolige omgivelser og
               nyd en lækker morgenmad med lokale råvarer.</p>
           </div>
         </details>
-        <details name="overskrifter">
-          <summary>Gårdbutik og andre faciliteter</summary>
-          <div>
-            <p>Gå på opdagelse i vores gårdbutik, hvor du finder friske, lokale og økologiske produkter. Her kan du tage
-              lidt af gårdens sæson med hjem.</p>
-          </div>
-        </details>
       </div>
     </div>
+    <p>Brug kortet til at finde rundt på gården og få et overblik over de forskellige områder. Klik på punkterne for
+      at læse mere om gårdens faciliteter og oplevelser.</p>
   </main>
   <footer>
-    <p>footer</p>
+    <footer class="site-footer">
+
+      <div class="footer-content">
+
+        <div class="footer-logo">
+
+          <div class="footer-logo-box">
+            <img src="billeder/logo_hvid.svg" alt="Høstgården logo">
+          </div>
+
+          <div class="footer-brand-text">
+            <h2>Høstgården</h2>
+            <p>En oplevelse fra jord til bord</p>
+          </div>
+
+        </div>
+        <div class="footer-kontakt">
+          <h3>Kontakt</h3>
+          <p>kontakt@hoestgaarden.dk</p>
+          <p>Telefon: 12 34 56 78</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Find rundt</h3>
+          <a href="#oplevelsen">Oplevelsen</a>
+          <a href="#ophold">Weekendophold</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>2026 Høstgården</p>
+      </div>
+
+    </footer>
   </footer>
 </body>
 
