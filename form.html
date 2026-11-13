@@ -4,42 +4,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formular | Eventnavn</title>
+  <title>Book nu</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+
+      <img src="billeder/header_logo.svg" alt="logo" class="header-logo">
       <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+        <ul class="menu">
+          <li><a href="./" aria-current="page">Forside</a></li>
+          <li><a href="./svg.html">Oplevelsen</a></li>
+          <li><a href="./form.html">Booking</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="form-page">
+    <section class="heleform">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h1>Book en oplevelse</h1>
       </header>
-
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="formular">
+        <fieldset>
+          <legend>Vælg eventtype </legend>
+          <label for="field-eventophold-1">
+            <input type="radio" id="field-eventophold-1" name="eventophold" value="event">
+            Event
+          </label>
+          <label for="field-eventophold-2">
+            <input type="radio" id="field-eventophold-2" name="eventophold" value="ophold">
+            Ophold + event
+          </label>
+        </fieldset>
+        <div class="formselement">
+          <label for="field-navn">Navn:</label>
+          <input type="text" id="field-navn" name="navn">
+        </div>
+        <div class="formselement">
+          <label for="field-telefonnummer">Telefon:</label>
+          <input type="tel" id="field-telefonnummer" name="telefonnummer">
+        </div>
+        <div class="formselement">
+          <h3>Priser: </h3>
+          <p>voksne: 600 kr eksl. gebyr.</p>
+          <p>børn: 450 kr eksl. gebyr</p>
+        </div>
+        <div class="formselement">
+          <label for="field-antalvoksne">Antal voksne:</label>
+          <select id="field-antalvoksne" name="antalvoksne">
+            <option value="">Vælg antal</option>
+            <option value="antal-1">1</option>
+            <option value="antal-2">2</option>
+            <option value="antal-3">3</option>
+            <option value="antal-4">4</option>
+            <option value="antal-5">5</option>
+            <option value="antal-6">6</option>
+          </select>
+        </div>
+        <div class="formselement">
+          <label for="field-antalboern">Antal børn</label>
+          <select id="field-antalboern" name="antalboern">
+            <option value="">Vælg antal</option>
+            <option value="antal-1">1</option>
+            <option value="antal-2">2</option>
+            <option value="antal-3">3</option>
+            <option value="antal-4">4</option>
+            <option value="antal-5">5</option>
+            <option value="antal-6">6</option>
+          </select>
+        </div>
+        <div class="formselement">
+          <label for="field-dato">Dato</label>
+          <input type="date" id="field-dato" name="dato">
+        </div>
+        <label for="field-retningslinjer">
+          <input type="checkbox" id="field-retningslinjer" name="retningslinjer" value="accepteret">
+          Jeg accepterer eventets retningslinjer
+        </label>
+        <label for="field-reklame">
+          <input type="checkbox" id="field-reklame" name="reklame" value="reklameja" checked>
+          Jeg vil gerne tilmelde mig Høstgårdens nyhedsbrev og modtage reklame og markedsføring
+        </label>
+        <button type="submit" action="./opsamling.html">Book nu</button>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+
+      <div class="footer-logo">
+        <div class="footer-logo-box">
+          <img src="billeder/footer-logo.svg" alt="Høstgården logo">
+        </div>
+
+        <div class="footer-brand-text">
+          <h2>Høstgården</h2>
+          <p>En oplevelse fra jord til bord</p>
+        </div>
+      </div>
+
+      <div class="footer-kontakt">
+        <h3>Kontakt</h3>
+        <p>kontakt@hoestgaarden.dk</p>
+        <p>Telefon: 12 34 56 78</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Find rundt</h3>
+        <a href="#oplevelsen">Oplevelsen</a>
+        <a href="#ophold">Weekendophold</a>
+      </div>
+
     </div>
+    <div class="footer-bottom">
+      <p>2026 Høstgården</p>
+    </div>
+
   </footer>
   <script src="./script.js"></script>
 </body>

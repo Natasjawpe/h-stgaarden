@@ -1,10 +1,44 @@
-/* Variabler */
+/* TYPOGRAFI */
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mont-typo {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
+}
+h2 {
+  font-style: italic;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: normal;
+}
+/* VARIABLER */
 html {
-  --color-page: #f7f7f7;
-  --color-surface: #fff;
-  --color-text: #222;
-  --color-muted: #666;
-  --color-border: #d8d8d8;
+  /* Høstgårdens farver */
+  --color-beige: #f3ebdd;
+  --color-darkgreen: #303b17;
+  --color-green: #87916b;
+
+  /* Afstande */
   --space-05: 0.5rem;
   --space-1: 1rem;
   --space-2: 2rem;
@@ -14,14 +48,353 @@ html {
   color: var(--color-text);
 }
 
-/* Header og footer */
+/* GLOBAL LAYOUT */
+body {
+  margin: 0;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(1rem, 1fr) minmax(0, 75rem) minmax(1rem, 1fr);
+}
+
+main {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: 1 / -1;
+  align-content: start;
+}
+
+main > * {
+  grid-column: 2;
+  padding-block: var(--space-3);
+}
+main > section {
+  grid-column: 1 / -1;
+}
+
+/* HERO-SEKTION */
+.hero {
+  background-image: url(billeder/herobillede2.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  grid-column: 1 / -1;
+  display: grid;
+  place-items: center;
+  margin-bottom: 3%;
+  position: relative;
+}
+
+.hero-text {
+  color: white;
+  max-width: 750px;
+  width: 100%;
+  display: grid;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-shadow: 0.5px 2px 8px black;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.hero-buttons a:hover {
+  background-color: #46552a;
+}
+
+/* SEKTION 2: FRA JORD TIL BORD, WEEKEND OPHOLD INKL. BILLEDER */
+.sektion_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  margin-left: 75px;
+  margin-right: 75px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: var(--color-beige);
+}
+
+.sektion_2 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.oplevelse-tekst,
+.weekend-tekst {
+  display: grid;
+  gap: 2rem;
+  justify-items: start;
+  align-content: center;
+}
+
+/* "AKTIVITETER" / POP-OVERS */
+
+.aktiviteter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.aktivitet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+
+  transition: transform 0.2s ease;
+}
+
+.aktivitet:hover {
+  border-bottom-color: var(--color-border);
+  border-bottom: solid 1px;
+  width: fit-content;
+}
+
+.aktivitet img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+[popover] {
+  margin: auto;
+  padding: 2rem;
+  background-color: white;
+  border: solid 2px var(--color-green);
+  border-radius: 6px;
+  color: black;
+  width: 400px;
+  height: fit-content;
+  box-shadow: 0 4px 20px #0003;
+}
+
+.luk-popover {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+[popover] img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 2rem;
+}
+
+[popover] h2 {
+  margin-bottom: 1rem;
+}
+
+/* PLACERING AF POPOVERSNE */
+button[popovertarget="pop-host"] {
+  anchor-name: --host;
+}
+
+#pop-host {
+  position: fixed;
+  position-anchor: --host;
+  position-area: top;
+}
+
+button[popovertarget="pop-spis"] {
+  anchor-name: --spis;
+}
+
+#pop-spis {
+  position: fixed;
+  position-anchor: --spis;
+  position-area: top;
+}
+
+button[popovertarget="pop-sov"] {
+  anchor-name: --sov;
+}
+
+#pop-sov {
+  position: fixed;
+  position-anchor: --sov;
+  position-area: top;
+}
+
+/* SEKTION 3: MERE END BARE ET MÅLTID */
+
+.måltid {
+  background-image: url("billeder/langbord.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+.måltid h2 {
+  max-width: 500px;
+}
+
+.måltid-tekst {
+  text-align: left;
+  max-width: 500px;
+  margin-left: 3rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.måltid-tekst hr {
+  display: block;
+  width: 200px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* SEKTION 4: PLANLÆG DIT BESØG INKL. MAPS  */
+
+.planlæg-besøg {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5.5rem;
+  align-items: center;
+  padding: 3rem 5%;
+  background-color: var(--color-beige);
+  min-width: 0;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.planlæg-besøg img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.planlæg-tekst {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  text-align: left;
+  align-content: center;
+}
+
+/* SVG-SIDE */
+.svg-page {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.svg-intro {
+  display: grid;
+  gap: var(--space-1);
+  max-width: 60ch;
+}
+
+.svg-intro p {
+  color: var(--color-muted);
+}
+
+.svg-layout {
+  display: grid;
+  gap: var(--space-2);
+  align-items: start;
+  @media (width > 800px) {
+    grid-template-columns: 1fr min(40%, 36ch);
+  }
+}
+
+/* FORM-SIDE */
+.form-page {
+  display: grid;
+  gap: var(--space-2);
+  @media (width > 600px) {
+    grid-template-columns: min(40%, 50ch) 1fr;
+  }
+}
+
+.form-intro {
+  display: grid;
+  gap: var(--space-1);
+  align-content: start;
+  max-width: 60ch;
+}
+
+.form-intro p {
+  color: var(--color-muted);
+}
+
+/* OPSAMLING-SIDE */
+.opsamling-page {
+  display: grid;
+  gap: var(--space-2);
+  align-items: start;
+
+  @media (width > 800px) {
+    grid-template-columns: minmax(0, 44ch) minmax(20rem, 1fr);
+  }
+}
+
+.opsamling-intro {
+  display: grid;
+  gap: var(--space-1);
+  max-width: 60ch;
+}
+
+.opsamling-intro p {
+  color: var(--color-muted);
+}
+
+/* 404-SIDE */
+.error-page {
+  display: grid;
+  gap: var(--space-1);
+  max-width: 60ch;
+}
+
+.error-page p {
+  color: var(--color-muted);
+}
+
+/* HEADER & FOOTER - FÆLLES */
 .site-header,
 .site-footer {
   grid-column: 1 / -1;
-
   display: grid;
   grid-template-columns: inherit;
-  background: var(--color-surface);
 }
 
 .header-content,
@@ -29,72 +402,50 @@ html {
   grid-column: 2;
 }
 
+/* HEADER */
+.site-header {
+  background-color: var(--color-beige);
+  height: 110px;
+}
+
 .header-content {
-  min-height: 7rem;
+  min-height: 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-1);
 }
 
-.site-logo {
-  color: inherit;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 2rem;
+.eventnavn {
   position: absolute;
   left: 2rem;
 }
 
+/* LOGO */
 .header-logo {
-  width: 330px;
+  width: 300px;
   height: auto;
   position: absolute;
-  left: 50%;
+  left: 6rem;
   transform: translateX(-50%);
   margin-bottom: 25px;
+  margin-top: 10px;
 }
 
-.header-content nav {
-  margin-left: auto;
-  margin-right: -16rem;
-}
-
-.footer-content {
-  padding-block: var(--space-1);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-1);
-  color: var(--color-muted);
-}
-
-/* Navigation */
-[popover] {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-}
-
-.site-nav button {
-  padding: 0.4rem 0.7rem;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  @media (width > 600px) {
-    display: none;
-  }
+/* HEADER: NAN-MENU TIL HØJRE */
+.site-nav {
+  position: absolute;
+  right: 2rem;
 }
 
 .menu {
-  margin: 0;
   padding: var(--space-1);
   list-style: none;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   @media (width > 600px) {
     display: flex;
-    gap: var(--space-1);
+    gap: 4rem;
     padding: 0;
     border: none;
     background: none;
@@ -113,13 +464,24 @@ html {
 
 .menu a[aria-current="page"] {
   border-bottom-color: var(--color-border);
+  border-bottom: solid 1px;
 }
 
-/* Knap/link */
+/* Knap: burger menu til evt. mobilsite */
+.site-nav button {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--color-darkgreen);
+  background: var(--color-beige);
+  @media (width > 600px) {
+    display: none;
+  }
+}
+
+/* FOOTER */
 
 .site-footer {
-  background-color: #87916b;
-  color: #f5eee3;
+  background-color: var(--color-green);
+  color: white;
   padding: 3rem 6% 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -127,141 +489,69 @@ html {
 
 .footer-content {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 2rem;
-  max-width: none;
-  width: 100%;
-  margin: 0;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-}
-
-.footer-logo h2 {
-  font-family: Georgia, serif;
-  font-size: 2.2rem;
-  font-weight: normal;
-  margin-bottom: 0.5rem;
-  color: #f5eee3;
-}
-.footer-logo p {
-  margin: 0;
-  white-space: nowrap;
-  text-align: left;
-}
-
-.footer-content h3 {
-  font-size: 1.1rem;
-  margin: 0 0 1rem;
-  color: #f5eee3;
-}
-
-.footer-content p {
-  line-height: 1.8;
-  margin: 0 0 0.3rem;
+  gap: 3rem;
 }
 
 .footer-content a {
-  display: block;
-  color: #f5eee3;
   text-decoration: none;
-  margin-bottom: 0.8rem;
-}
-
-.footer-logo h2 {
-  color: #f5eee3;
+  color: inherit;
 }
 
 .footer-content a:hover {
   text-decoration: underline;
 }
 
-.site-footer,
-.site-footer h2,
-.site-footer h3,
-.site-footer p,
-.site-footer a {
-  color: #f5eee3;
-}
-
 .footer-bottom {
-  max-width: 90rem;
   width: 100%;
-  margin: 3rem auto 0;
+  margin: 3rem 0 0;
   padding-top: 1rem;
-  border-top: 1px solid #c4c99a;
+  border-top: 1px solid white;
   text-align: center;
-}
-
-.footer-bottom p {
-  margin: 0;
-}
-
-.site-footer hr {
-  display: none;
 }
 
 .footer-logo img {
   width: 310px;
   height: 190px;
-  object-fit: contain;
-  border-radius: 20px;
-  padding: 0.2rem;
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  max-width: 90rem;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .footer-logo {
   display: flex;
   align-items: center;
-  justify-self: start;
-  gap: 2rem;
-  margin-left: 0;
+  margin-left: -80px;
 }
 
 .footer-brand-text {
   display: grid;
-  gap: 0.8rem;
-  align-content: center;
+  gap: 1rem;
 }
 
-.footer-brand-text h2 {
-  font-family: Georgia, serif;
-  font-size: 2rem;
-  font-weight: normal;
-  margin: 0;
-  white-space: nowrap;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.footer-brand-text p {
-  white-space: nowrap;
-  margin: 0;
-}
 .footer-kontakt,
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .footer-kontakt h3,
-.footer-links h3 {
-  margin-bottom: 1.2rem;
-}
-
+.footer-links h3,
 .footer-kontakt p,
 .footer-links a {
-  margin-bottom: 0.8rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+/* KNAPPER */
+
+.knap {
+  display: inline-block;
+  background-color: var(--color-darkgreen);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid white;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.knap:hover {
+  background-color: #46552a;
 }

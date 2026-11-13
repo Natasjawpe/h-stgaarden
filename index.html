@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Høstgården</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital@0;1&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,25 +15,162 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+
+      <img src="billeder/header_logo.svg" alt="logo" class="header-logo">
       <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
+        <ul class="menu">
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Oplevelsen</a></li>
+          <li><a href="./form.html">Booking</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main></main>
+  <main>
+
+    <section class="hero">
+      <div class="hero-text">
+
+        <h1>Velkommen til Høstgården</h1>
+        <h2>En oplvelse fra jord til bord</h2>
+
+        <div class="hero-buttons">
+          <a href="./svg.html" class="knap">Udforsk oplvelsen</a>
+          <a href="./form.html" class="knap">Book et ophold</a>
+
+        </div>
+    </section>
+
+    <section class="sektion_2">
+
+      <img src="billeder/jordtilbord.jpg" alt="Grøntsagskurv">
+
+      <div class="oplevelse-tekst">
+        <h2>Fra jord til bord</h2>
+
+        <p>På Høstgården får I mulighed for at komme helt tæt
+          på naturen og råvarerne. Start dagen med en guidet
+          tur rundt på gården, hvor I lærer om vores
+          sæsonbestemte afgrøder. Derefter kan I selv gå på
+          opdagelse i markerne og høste de råvarer, I vil
+          bruge til jeres måltid.
+        </p>
+
+        <div class="aktiviteter">
+          <button type="button" class="aktivitet" popovertarget="pop-host">
+            <img src="billeder/høst.svg" alt="Høst">
+            <p>Høst</p>
+          </button>
+
+          <button type="button" class="aktivitet" popovertarget="pop-spis">
+            <img src="billeder/spis.svg" alt="Lav og spis">
+            <p>Lav og spis</p>
+          </button>
+
+          <button type="button" class="aktivitet" popovertarget="pop-sov">
+            <img src="billeder/sov.svg" alt="Overnatning">
+            <p>Overnatning</p>
+          </button>
+        </div>
+
+        <div id="pop-host" popover>
+          <button type="button" class="luk-popover" popovertarget="pop-host" popovertargetaction="hide">×</button>
+          <h2>Høst</h2>
+          <p>På Høstgården kan du selv høste friske, sæsonbestemte råvarer direkte fra marken. Oplev glæden ved at komme
+            tæt på
+            naturen og se, hvor maden kommer fra.</p>
+          <img src="billeder/høstpop.jpg" alt="">
+        </div>
+
+        <div id="pop-spis" popover>
+          <button type="button" class="luk-popover" popovertarget="pop-spis" popovertargetaction="hide">×</button>
+          <h2>Lav og spis</h2>
+          <p>Her kan I sammen tilberede et lækkert måltid med friske råvarer fra gården. Nyd madlavningen, fællesskabet
+            og oplevelsen
+            af at skabe et måltid fra bunden.</p>
+          <img src="billeder/spisimg.jpg" alt="">
+        </div>
+
+        <div id="pop-sov" popover>
+          <button type="button" class="luk-popover" popovertarget="pop-sov" popovertargetaction="hide">×</button>
+          <h2>Overnatning</h2>
+          <p>Nyd en overnatning midt i naturen, hvor I kan slappe af og komme helt ned i gear. Vågn op til frisk luft,
+            smukke
+            omgivelser og en hyggelig morgen på Høstgården.</p>
+          <img src="billeder/sovimg.png" alt="">
+        </div>
+      </div>
+
+      <div class="weekend-tekst">
+        <h2>Weekendophold</h2>
+
+        <p>Har I lyst til at forlænge oplevelsen? På Høstgården kan I booke et hyggeligt ophold og nyde gårdens
+          rolige
+          omgivelser.
+          Brug dagen på at udforske naturen, lave mad sammen og slut aftenen af med god mad og hyggeligt samvær.
+        </p>
+
+        <a href="./form.html" class="knap">Book et ophold</a>
+      </div>
+
+      <img src="billeder/sovpopup.jpg" alt="Hyggeligt ophold på Høstgården">
+    </section>
+
+    <section class="måltid">
+      <div class="måltid-tekst">
+        <h2>Mere end bare et måltid</h2>
+        <hr>
+        <p>Et måltid handler om mere end det, der ligger på tallerkenen. Det handler om at samles, dele gode
+          oplevelser og nyde
+          tiden sammen.</p>
+      </div>
+    </section>
+
+    <section class="planlæg-besøg">
+      <div class="planlæg-tekst">
+        <h2>Planlæg dit besøg</h2>
+        <p>Herunder kan du se en oversigt over Høstgården,
+          og se vores forskellige faciliteter og aktiviteter.
+        </p>
+        <a href="./svg.html" class="knap">Se plantegning</a>
+      </div>
+
+      <img src="billeder/maps.jpg" alt="Kort">
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+
+      <div class="footer-logo">
+        <div class="footer-logo-box">
+          <img src="billeder/footer-logo.svg" alt="Høstgården logo">
+        </div>
+
+        <div class="footer-brand-text">
+          <h2>Høstgården</h2>
+          <p>En oplevelse fra jord til bord</p>
+        </div>
+      </div>
+
+      <div class="footer-kontakt">
+        <h3>Kontakt</h3>
+        <p>kontakt@hoestgaarden.dk</p>
+        <p>Telefon: 12 34 56 78</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Find rundt</h3>
+        <a href="#oplevelsen">Oplevelsen</a>
+        <a href="#ophold">Weekendophold</a>
+      </div>
+
     </div>
+    <div class="footer-bottom">
+      <p>2026 Høstgården</p>
+    </div>
+
   </footer>
   <script src="./script.js"></script>
 </body>

@@ -1,40 +1,77 @@
-/*body styling*/
+/*svg main styling*/
+main {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.introtekstsvg {
+  max-width: 75%;
+  font-size: 18px;
+}
 .indhold {
   display: flex;
   align-items: center;
   gap: 40px;
   position: relative;
+  margin-right: 75px;
+  border: solid 2px #87916b;
+  border-radius: 5px;
 }
 .indhold > img:first-child {
-    width: 65%;
+  width: 65%;
 }
-
 
 /*accordions styling*/
 .accordions {
   width: 35%;
   border: solid 2px gray;
   padding-left: 10px;
+  border: 1px solid #a9b18c;
+  border-radius: 12px;
+  background-color: #f4f0e5;
 }
 .accordions {
-  border: solid 1px black;
   padding: 5px;
 }
+/* de enkelte accordion-elementer */
 .accordions details {
-  border: 2px solid lightgray;
-  padding: 10px;
-  margin: 15px;.hoest 
-  background-color: lightgreen;
+  background-color: #e9e5d5;
+  border: 1px solid #d5d0bd;
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* accordions */
+.accordions summary {
+  color: #514638;
+  font-weight: bold;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+/* hover-effekt */
+.accordions details:hover {
+  background-color: #a9b18c;
+}
+
+/* teksten inde i accordion */
+.accordions details p {
+  color: #514638;
+  line-height: 1.6;
+  margin-top: 15px;
 }
 
 /*figur styling*/
 .figur {
-    position: absolute;
-    width: 180px;
-    height: auto;
-    left: 38%;
-    top: 41%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    transition: left 1s ease, top 1s ease;
+  position: absolute;
+  width: 180px;
+  height: auto;
+  left: 38%;
+  top: 41%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  transition:
+    left 1s ease,
+    top 1s ease;
 }
