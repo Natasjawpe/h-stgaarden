@@ -1,0 +1,27 @@
+.heleform {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 50px;
+  padding: 50px;
+}
+.formular {
+  background-color: antiquewhite;
+  text-align: left;
+  padding: 20px;
+}
+.formular fieldset {
+  margin-bottom: 20px;
+}
+.formselement {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+.form-intro {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
