@@ -7,13 +7,11 @@
   <title>Book nu</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
   <header class="site-header">
     <div class="header-content">
-
       <img src="billeder/header_logo.svg" alt="logo" class="header-logo">
       <nav class="site-nav">
         <ul class="menu">
@@ -25,74 +23,92 @@
     </div>
   </header>
 
+
   <main>
-    <section class="heleform">
-      <header class="form-intro">
-        <h1>Book en oplevelse</h1>
-      </header>
-      <form class="formular">
-        <fieldset>
-          <legend>Vælg eventtype </legend>
-          <label for="field-eventophold-1">
-            <input type="radio" id="field-eventophold-1" name="eventophold" value="event">
-            Event
+    <section class="hero-forms">
+      <h1>Book din oplevelse på Høstgården</h1>
+    </section>
+
+    <section class="hele-main-forms">
+      <div class="tekst-paa-forms">
+        <h2>Dit ophold starter her</h2>
+        <p>Book dit næste ophold eller event hos os, og glæd dig til hyggelige omgivelser og gode oplevelser. Find
+          ledige
+          datoer, se vores bookingmuligheder og læs mere om praktisk information før ankomst.</p>
+        <h3>Priser: </h3>
+        <p>Priserne varierer alt efter, om du vælger kun event eller et samlet ophold med event. Der er forskellige
+          priser for voksne og børn, og prisen kan desuden variere afhængigt af den valgte dato.</p>
+        <p> Vælg derfor din ønskede oplevelse og dato for at se den aktuelle pris.
+        </p>
+      </div>
+      <div class="formularen">
+        <h2>Book her</h2>
+        <form action="./opsamling.html" method="get">
+          <fieldset>
+            <div class="formselement">
+              <legend>Vælg eventtype: </legend>
+              <label for="field-eventophold-1">
+                <input type="radio" id="field-eventophold-1" name="eventophold" value="event">
+                Event
+              </label>
+              <label for="field-eventophold-2">
+                <input type="radio" id="field-eventophold-2" name="eventophold" value="ophold">
+                Ophold + event
+              </label>
+            </div>
+          </fieldset>
+          <h3>Kontaktoplysninger</h3>
+          <div class="formselement">
+            <label for="field-navn">Navn:</label>
+            <input type="text" id="field-navn" name="navn">
+          </div>
+          <div class="formselement">
+            <label for="field-telefonnummer">Telefon:</label>
+            <input type="tel" id="field-telefonnummer" name="telefonnummer">
+          </div>
+          <h3>Antal gæster</h3>
+          <div class="formselement">
+            <label for="field-antalvoksne">Antal voksne:</label>
+            <select id="field-antalvoksne" name="antalvoksne">
+              <option value="">Vælg antal</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="formselement">
+            <label for="field-antalboern">Antal børn:</label>
+            <select id="field-antalboern" name="antalboern">
+              <option value="">Vælg antal</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <h3>Vælg dato</h3>
+          <div class="formselement">
+            <label for="field-dato">Dato:</label>
+            <input type="date" id="field-dato" name="dato">
+          </div>
+          <label for="field-retningslinjer">
+            <input type="checkbox" id="field-retningslinjer" name="retningslinjer" value="accepteret">
+            Jeg accepterer eventets retningslinjer
           </label>
-          <label for="field-eventophold-2">
-            <input type="radio" id="field-eventophold-2" name="eventophold" value="ophold">
-            Ophold + event
+          <label for="field-reklame">
+            <input type="checkbox" id="field-reklame" name="reklame" value="reklameja" checked>
+            Jeg vil gerne tilmelde mig Høstgårdens nyhedsbrev og modtage markedsføring
           </label>
-        </fieldset>
-        <div class="formselement">
-          <label for="field-navn">Navn:</label>
-          <input type="text" id="field-navn" name="navn">
-        </div>
-        <div class="formselement">
-          <label for="field-telefonnummer">Telefon:</label>
-          <input type="tel" id="field-telefonnummer" name="telefonnummer">
-        </div>
-        <div class="formselement">
-          <h3>Priser: </h3>
-          <p>voksne: 600 kr eksl. gebyr.</p>
-          <p>børn: 450 kr eksl. gebyr</p>
-        </div>
-        <div class="formselement">
-          <label for="field-antalvoksne">Antal voksne:</label>
-          <select id="field-antalvoksne" name="antalvoksne">
-            <option value="">Vælg antal</option>
-            <option value="antal-1">1</option>
-            <option value="antal-2">2</option>
-            <option value="antal-3">3</option>
-            <option value="antal-4">4</option>
-            <option value="antal-5">5</option>
-            <option value="antal-6">6</option>
-          </select>
-        </div>
-        <div class="formselement">
-          <label for="field-antalboern">Antal børn</label>
-          <select id="field-antalboern" name="antalboern">
-            <option value="">Vælg antal</option>
-            <option value="antal-1">1</option>
-            <option value="antal-2">2</option>
-            <option value="antal-3">3</option>
-            <option value="antal-4">4</option>
-            <option value="antal-5">5</option>
-            <option value="antal-6">6</option>
-          </select>
-        </div>
-        <div class="formselement">
-          <label for="field-dato">Dato</label>
-          <input type="date" id="field-dato" name="dato">
-        </div>
-        <label for="field-retningslinjer">
-          <input type="checkbox" id="field-retningslinjer" name="retningslinjer" value="accepteret">
-          Jeg accepterer eventets retningslinjer
-        </label>
-        <label for="field-reklame">
-          <input type="checkbox" id="field-reklame" name="reklame" value="reklameja" checked>
-          Jeg vil gerne tilmelde mig Høstgårdens nyhedsbrev og modtage reklame og markedsføring
-        </label>
-        <button type="submit" action="./opsamling.html">Book nu</button>
-      </form>
+          <div class="book-forms">
+            <button type="submit">Book nu</button>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -118,8 +134,8 @@
 
       <div class="footer-links">
         <h3>Find rundt</h3>
-        <a href="#oplevelsen">Oplevelsen</a>
-        <a href="#ophold">Weekendophold</a>
+        <a href="./svg.html">Oplevelsen</a>
+        <a href="./index.html">Weekendophold</a>
       </div>
 
     </div>

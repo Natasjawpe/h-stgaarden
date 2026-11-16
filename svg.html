@@ -2,13 +2,14 @@
 <html lang="da">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Find rundt på gården</title>
-  <link rel="stylesheet" href="svg.css" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="starter.css">
-  <script src="svg.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Høstgården</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./starter.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -18,47 +19,92 @@
       <img src="billeder/header_logo.svg" alt="logo" class="header-logo">
       <nav class="site-nav">
         <ul class="menu">
-          <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Oplevelsen</a></li>
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./" aria-current="page">Oplevelsen</a></li>
           <li><a href="./form.html">Booking</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <h1>Find rundt på gården</h1>
-    <p class="introtekstsvg">Udforsk vores gård, og gå på opdagelse blandt de mange oplevelser, vi har at byde på. Fra
-      høst af sæsonens
-      råvarer til hyggelig overnatning og livet på landet.</p>
-    <div class="indhold">
-      <img src="billeder/kort.svg" alt="svg af høstgarden" />
-      <img src="billeder/figur.svg" alt="figur" class="figur">
-      <div class="accordions">
-        <details name="gaard" data-x="30" data-y="45">
-          <summary>Høst</summary>
-          <div>
-            <p>Udforsk vores plantager, hvor du kan gå på opdagelse blandt sæsonens frugter og grøntsager og selv høste
-              friske råvarer.
-            </p>
+    <section class="svg-hero">
+      <div class="herotekst-svg">
+        <h1>Find rundt på gården</h1>
+        <h2>Udforsk gårdens mange oplevelser– fra friske råvarer og hyggelige gårdomgivelser til overnatning og lokale
+          specialiteter.</h2>
+        <div class="hero-button">
+          <a href="./form.html" class="knap">Book et ophold</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sektion_svg2">
+      <h2>Udforsk gården</h2>
+      <div class="kort">
+        <img src="billeder/kort.svg" alt="svg af høstgarden" />
+        <img class="kort-figur" src="billeder/figur.svg" alt="figur">
+      </div>
+
+      <div class="interaktiv">
+
+        <details name="overskrifter" data-x="40" data-y="45">
+          <summary>
+            <img class="dropdown-ikon" src="billeder/høst.svg" alt="">
+            Plantager & høst
+          </summary>
+          <div class="dropdown-indhold">
+            <p>Udforsk vores plantager hvor du kan gå på opdagelse land sæsonens frugter og grøntsager, samt høste
+              friske råvarer.</p>
           </div>
         </details>
-        <details name="gaard" data-x="59" data-y="34">
-          <summary>Reception og hovedhuset</summary>
-          <div>
-            <p>I hovedhuset finder du receptionen, hvor du kan få hjælp og information. Her samles vi også i køkkenet
-              for at tilberede lækre måltider af gårdens råvarer.</p>
-          </div>
-        </details>
-        <details name="gaard" data-x="77" data-y="56">
-          <summary>Overnatning på gården</summary>
-          <div>
-            <p>Forlæng oplevelsen med en hyggelig overnatning i vores glampingområde. Vågn op til rolige omgivelser og
+
+        <details name="overskrifter" data-x="90" data-y="50">
+          <summary>
+            <img class="dropdown-ikon" src="billeder/sov.svg" alt="">
+            Overnatning på gården
+          </summary>
+          <div class="dropdown-indhold">
+            <p>Forlæng oplevelsen med en hyggelig overnatning på et af vores værelser eller glampingområdet. Vågn op til
+              rolige omgivelser og
               nyd en lækker morgenmad med lokale råvarer.</p>
           </div>
         </details>
+
+        <details name="overskrifter" data-x="59" data-y="34">
+          <summary>
+            <img class="dropdown-ikon" src="billeder/spis.svg" alt="">
+            Reception & hovedhuset
+          </summary>
+          <div class="dropdown-indhold">
+            <p>I hovedhuset finder du receptionen, hvor du kan få hjælp og information. Her samles vi også i køkkenet
+              for at tilberede aftenens måltider sammen. Det er også i hovedhuset, at værelserne ligger, hvis du ikke
+              har booket glamping.</p>
+          </div>
+        </details>
+
       </div>
-    </div>
+    </section>
+
+    <section class="sektion_svg3">
+      <div class="galleribilleder">
+        <img src="billeder/galleri1.jpg" alt="">
+        <img src="billeder/galleri2.jpg" alt="">
+        <img src="billeder/galleri3.jpg" alt="">
+        <img src="billeder/galleri4.jpg" alt="">
+        <img src="billeder/galleri5.jpg" alt="">
+        <img src="billeder/galleri6.png" alt="">
+        <img src="billeder/galleri7.jpg" alt="">
+        <img src="billeder/galleri8.jpg" alt="">
+        <img src="billeder/galleri9.jpg" alt="">
+        <img src="billeder/galleri10.jpg" alt="">
+        <img src="billeder/galleri11.jpg" alt="">
+        <img src="billeder/galleri12.jpg" alt="">
+      </div>
+
+    </section>
   </main>
+
   <footer class="site-footer">
     <div class="footer-content">
 
@@ -91,6 +137,7 @@
     </div>
 
   </footer>
+  <script src="./script.js"></script>
 </body>
 
 </html>

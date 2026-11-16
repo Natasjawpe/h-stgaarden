@@ -76,7 +76,6 @@ dialog {
     overflow: hidden;
     overscroll-behavior: contain;
   }
-}
 
 .visually-hidden {
   position: absolute;
