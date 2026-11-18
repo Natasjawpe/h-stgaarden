@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opsamling</title>
-
+  <title>Høstgården</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital@0;1&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./opsamling.css">
 </head>
 
 <!-- HEADER OG NAVIGATION -->
@@ -23,7 +24,7 @@
       <!-- MENU -->
       <nav class="site-nav">
         <ul class="menu">
-          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./" aria-current="page">Forside</a></li>
           <li><a href="./svg.html">Oplevelsen</a></li>
           <li><a href="./form.html">Booking</a></li>
         </ul>
@@ -33,72 +34,52 @@
 
   <main>
 
-    <section class="hero-opsamling">
-
+    <section class="booking">
       <!-- BEKRÆFTELSESKORT -->
       <div class="bekræftelses-kort">
 
-
-
         <!-- VENSTRE SIDE - BOOKINGBEKRÆFTELSE -->
-        <div class="opsamling-intro">
-          <h1>Tak for din booking, Ida!</h1>
-          <p>
-            Din booking er bekræftet. Vi glæder os til at
-            byde dig velkommen på Høstgården.
-          </p>
 
+        <section class="data">
+          <div class="opsamling-intro">
+            <h1>Tak for din booking</h1>
+            <p>
+              Din booking er bekræftet. Vi glæder os til at
+              byde dig velkommen på Høstgården.
+            </p>
 
-
-          <!-- TILBAGE-KNAP -->
-          <a class="booking-button" href="./index.html">
-            Tilbage til forsiden →
-          </a>
-
-        </div>
-
-
-        <!-- HØJRE SIDE - BOOKINGOVERSIGT -->
-        <div class="booking-oversigt">
-
-          <h2>Din bookingoversigt</h2>
-
-          <!-- DATO -->
-          <div class="booking-item">
-            <h3>Dato</h3>
-            <p>12.09.2027</p>
+            <!-- TILBAGE-KNAP -->
+            <a class="booking-button" href="./index.html">
+              Tilbage til forsiden →
+            </a>
           </div>
 
+          <!-- HØJRE SIDE - BOOKINGOVERSIGT -->
+          <div class="booking-oversigt">
 
-          <!-- EVENTTYPE -->
-          <div class="booking-item">
-            <h3>Eventtype</h3>
-            <p>Ophold + event</p>
+            <h2>Din bookingoversigt</h2>
+
+            <h3>Ophold:</h3>
+            <p><span id="eventophold"></span></p>
+
+            <h3>Navn:</h3>
+            <p><span id="navn"></span></p>
+
+            <h3>Telefonnummer: </h3>
+            <p><span id="telefonnummer"></span></p>
+
+            <h3>Antal voksne:</h3>
+            <p><span id="antalvoksne"></span></p>
+
+            <h3>Antal børn:</h3>
+            <p><span id="antalboern"></span></p>
+
+            <h3>Vælg dato:</h3>
+            <p><span id="dato"></span></p>
+
           </div>
 
-
-          <!-- ANTAL VOKSNE -->
-          <div class="booking-item">
-            <h3>Antal voksne</h3>
-            <p>2 personer</p>
-          </div>
-
-
-          <!-- ANTAL BØRN -->
-          <div class="booking-item">
-            <h3>Antal børn</h3>
-            <p>1 person</p>
-          </div>
-
-
-          <!-- TELEFON -->
-          <div class="booking-item">
-            <h3>Telefon</h3>
-            <p>12 34 56 78</p>
-          </div>
-
-        </div>
-
+        </section>
       </div>
 
     </section>
@@ -136,8 +117,8 @@
       <!-- FOOTER LINKS -->
       <div class="footer-links">
         <h3>Find rundt</h3>
-        <a href="svg.html">Oplevelsen</a>
-        <a href="index.html">Weekendophold</a>
+        <a href="#oplevelsen">Oplevelsen</a>
+        <a href="#ophold">Weekendophold</a>
       </div>
 
     </div>

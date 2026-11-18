@@ -102,7 +102,7 @@ main > section {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .hero-buttons a:hover {
@@ -481,11 +481,11 @@ button[popovertarget="pop-sov"] {
   height: 250px;
   object-fit: cover;
 }
-/* FORM-SIDE */
+
 /*FORMS FORMULAR SIDE*/
 /*FORMS - hero*/
 .hero-forms {
-  background-image: url(billeder/eng.png);
+  background-image: url(billeder/eng2.png);
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -494,6 +494,7 @@ button[popovertarget="pop-sov"] {
   place-items: center;
   margin-bottom: 3%;
   position: relative;
+  align-content: center;
 }
 
 .hero-forms h1 {
@@ -511,8 +512,10 @@ button[popovertarget="pop-sov"] {
 .hele-main-forms {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
-  margin: 75px;
+  margin-left: 75px;
+  margin-right: 75px;
   background-color: var(--color-beige);
+  margin-bottom: 3rem;
 }
 /*FORMS - formularen*/
 .formularen {
@@ -525,7 +528,6 @@ button[popovertarget="pop-sov"] {
 }
 .formularen h2 {
   font-size: 40px;
-  font-weight: bold;
   margin-top: 15px;
   margin-bottom: 8px;
 }
@@ -556,11 +558,12 @@ fieldset {
 /*FORMS - teksten på formular main delen - venstre side*/
 .tekst-paa-forms {
   margin-top: 80px;
-  padding: 25px;
+  padding: 40px;
+  text-align: left;
 }
 .tekst-paa-forms h2 {
-  margin-bottom: 30px;
-  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 .tekst-paa-forms h3 {
   margin-top: 50px;

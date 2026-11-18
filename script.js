@@ -18,7 +18,33 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-// FORMS //
+// Opsamlingsside
+const booking = document.querySelector(".booking");
 
-// OPSAMLING
-const opsamlingPlaceholder = document.querySelector(".opsamling-placeholder");
+if (booking) {
+  const params = new URLSearchParams(window.location.search);
+
+  const opholdInput = document.querySelector("#eventophold");
+  const ophold = params.get("eventophold");
+  opholdInput.textContent = ophold;
+
+  const navnInput = document.querySelector("#navn");
+  const navn = params.get("navn");
+  navnInput.textContent = navn;
+
+  const telefonInput = document.querySelector("#telefonnummer");
+  const telefon = params.get("telefonnummer");
+  telefonInput.textContent = telefon;
+
+  const voksneInput = document.querySelector("#antalvoksne");
+  const voksne = params.get("antalvoksne");
+  voksneInput.textContent = voksne;
+
+  const boernInput = document.querySelector("#antalboern");
+  const boern = params.get("antalboern");
+  boernInput.textContent = boern;
+
+  const datoInput = document.querySelector("#dato");
+  const dato = params.get("dato");
+  datoInput.textContent = dato;
+}
