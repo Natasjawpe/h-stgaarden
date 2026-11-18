@@ -25,25 +25,21 @@ if (booking) {
   const navnInput = document.querySelector("#navn");
   const params = new URLSearchParams(window.location.search);
   const navn = params.get("navn");
-  navnInput.textContent = navn;
+  navnInput.textContent = navnInput;
 
   const telefonInput = document.querySelector("#telefonnummer");
-  const params = new URLSearchParams(window.location.search);
   const telefon = params.get("telefonnummer");
-  telefonInput.textContent = telefonnummer;
+  telefonInput.textContent = telefonInput;
 
   const voksneInput = document.querySelector("#antalvoksne");
-  const params = new URLSearchParams(window.location.search);
   const antalvoksne = params.get("antalvoksne");
-  voksneInputInput.textContent = antalvoksne;
+  voksneInputInput.textContent = voksneInput;
 
   const boernInput = document.querySelector("#antalboern");
-  const params = new URLSearchParams(window.location.search);
   const boern = params.get("antalboern");
-  boernInput.textContent = antalboern;
+  boernInput.textContent = boernInput;
 
   const datoInput = document.querySelector("#dato");
-  const params = new URLSearchParams(window.location.search);
   const dato = params.get("dato");
-  datoInput.textContent = dato;
+  datoInput.textContent = datoInput;
 }

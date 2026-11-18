@@ -503,24 +503,147 @@ button[popovertarget="pop-sov"] {
 }
 
 /* OPSAMLING-SIDE */
-.opsamling-page {
+/* BAGGRUND OG HERO */
+.hero-opsamling {
+  background-image: url(billeder/baggrundsbillede.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 580px;
+  height: auto;
+  padding: 40px 0;
   display: grid;
-  gap: var(--space-2);
-  align-items: start;
-
-  @media (width > 800px) {
-    grid-template-columns: minmax(0, 44ch) minmax(20rem, 1fr);
-  }
+  place-items: center;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.opsamling-intro {
+/* DEN STORE CREMEFARVEDE BOKS */
+.bekræftelses-kort {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f4eadb;
+  border-radius: 25px;
   display: grid;
-  gap: var(--space-1);
-  max-width: 60ch;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* VENSTRE SIDE - TAK FOR DIN BOOKING */
+.opsamling-intro {
+  position: static;
+  transform: none;
+  color: #343b22;
+  max-width: 450px;
+}
+
+.opsamling-intro h1 {
+  color: #343b22;
+  font-size: 46px;
+  text-align: left;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 .opsamling-intro p {
-  color: var(--color-muted);
+  font-size: 17px;
+  line-height: 1.6;
+  color: #343b22;
+  margin-bottom: 25px;
+}
+
+/* TILBAGE-KNAP */
+.booking-button {
+  display: inline-block;
+  background-color: #46552a;
+  color: white;
+  text-decoration: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+/* HØJRE SIDE - BOOKINGOVERSIGT */
+.booking-oversigt {
+  background-color: #faf5ed;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.booking-oversigt h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #343b22;
+}
+
+/* BOOKINGOPLYSNINGER */
+.booking-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #ded4c5;
+}
+
+.booking-item h3 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #343b22;
+  margin: 0;
+}
+
+.booking-item p {
+  font-size: 16px;
+  color: #343b22;
+  margin: 0;
+  text-align: right;
+}
+/* SKRIFTTYPE PÅ BOOKINGOPLYSNINGER */
+.booking-item h3,
+.booking-item p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  margin-top: 50px;
+  border-radius: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* MOBILVERSION */
+@media (max-width: 768px) {
+  .booking {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 0;
+  }
+
+  .opsamling-intro h1 {
+    font-size: 34px;
+  }
+
+  .booking-oversigt {
+    padding: 20px;
+  }
+
+  .booking-oversigt h2 {
+    font-size: 23px;
+  }
 }
 
 /* 404-SIDE */
