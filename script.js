@@ -22,24 +22,29 @@ dropdowns.forEach((dropdown) => {
 const booking = document.querySelector(".booking");
 
 if (booking) {
-  const navnInput = document.querySelector("#navn");
   const params = new URLSearchParams(window.location.search);
+
+  const opholdInput = document.querySelector("#eventophold");
+  const ophold = params.get("eventophold");
+  opholdInput.textContent = ophold;
+
+  const navnInput = document.querySelector("#navn");
   const navn = params.get("navn");
-  navnInput.textContent = navnInput;
+  navnInput.textContent = navn;
 
   const telefonInput = document.querySelector("#telefonnummer");
   const telefon = params.get("telefonnummer");
-  telefonInput.textContent = telefonInput;
+  telefonInput.textContent = telefon;
 
   const voksneInput = document.querySelector("#antalvoksne");
-  const antalvoksne = params.get("antalvoksne");
-  voksneInputInput.textContent = voksneInput;
+  const voksne = params.get("antalvoksne");
+  voksneInput.textContent = voksne;
 
   const boernInput = document.querySelector("#antalboern");
   const boern = params.get("antalboern");
-  boernInput.textContent = boernInput;
+  boernInput.textContent = boern;
 
   const datoInput = document.querySelector("#dato");
   const dato = params.get("dato");
-  datoInput.textContent = datoInput;
+  datoInput.textContent = dato;
 }
