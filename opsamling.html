@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./opsamling.css">
+
 </head>
 
 <!-- HEADER OG NAVIGATION -->
@@ -33,75 +34,49 @@
 
   <main>
 
-    <section class="hero-opsamling">
+    <section class="booking">
+      <section class="data">
+        <!-- BEKRÆFTELSESKORT -->
+        <div class="bekræftelses-kort">
 
-      <!-- BEKRÆFTELSESKORT -->
-      <div class="bekræftelses-kort">
+          <!-- VENSTRE SIDE - BOOKINGBEKRÆFTELSE -->
 
+          <section>
+            <div class="opsamling-intro">
+              <h1>Tak for din booking</h1>
+              <p>
+                Din booking er bekræftet. Vi glæder os til at
+                byde dig velkommen på Høstgården.
+              </p>
 
+              <!-- TILBAGE-KNAP -->
+              <a class="booking-button" href="./index.html">
+                Tilbage til forsiden →
+              </a>
+            </div>
 
-        <!-- VENSTRE SIDE - BOOKINGBEKRÆFTELSE -->
-        <div class="opsamling-intro">
-          <h1>Tak for din booking, Ida!</h1>
-          <p>
-            Din booking er bekræftet. Vi glæder os til at
-            byde dig velkommen på Høstgården.
-          </p>
+            <!-- HØJRE SIDE - BOOKINGOVERSIGT -->
+            <div class="booking-oversigt">
 
+              <h2>Din bookingoversigt</h2>
 
+              <h3>Ophold: <span id="eventophold"></span> </h3>
 
-          <!-- TILBAGE-KNAP -->
-          <a class="booking-button" href="./index.html">
-            Tilbage til forsiden →
-          </a>
+              <h3>Navn: <span id="navn"></span> </h3>
 
-        </div>
+              <h3>Telefonnummer: <span id="telefonnummer"></span></h3>
 
+              <h3>Antal voksne: <span id="antalvoksne"></span></h3>
 
-        <!-- HØJRE SIDE - BOOKINGOVERSIGT -->
-        <div class="booking-oversigt">
+              <h3>Antal børn: <span id="antalboern"></span></h3>
 
-          <h2>Din bookingoversigt</h2>
+              <h3>Vælg dato: <span id="antalboern"></span></h3>
 
-          <!-- DATO -->
-          <div class="booking-item">
-            <h3>Dato</h3>
-            <p>12.09.2027</p>
-          </div>
+            </div>
 
+          </section>
 
-          <!-- EVENTTYPE -->
-          <div class="booking-item">
-            <h3>Eventtype</h3>
-            <p>Ophold + event</p>
-          </div>
-
-
-          <!-- ANTAL VOKSNE -->
-          <div class="booking-item">
-            <h3>Antal voksne</h3>
-            <p>2 personer</p>
-          </div>
-
-
-          <!-- ANTAL BØRN -->
-          <div class="booking-item">
-            <h3>Antal børn</h3>
-            <p>1 person</p>
-          </div>
-
-
-          <!-- TELEFON -->
-          <div class="booking-item">
-            <h3>Telefon</h3>
-            <p>12 34 56 78</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
+      </section>
 
   </main>
 
