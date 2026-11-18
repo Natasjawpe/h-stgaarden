@@ -71,11 +71,12 @@ select,
 
 dialog {
   overscroll-behavior: none;
+}
 
-  &::backdrop {
-    overflow: hidden;
-    overscroll-behavior: contain;
-  }
+&::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
 
 .visually-hidden {
   position: absolute;
