@@ -4,46 +4,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opsamling | Eventnavn</title>
+  <title>Høstgården</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital@0;1&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 
+<!-- HEADER OG NAVIGATION -->
+
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+
+      <!-- LOGO -->
+      <img src="billeder/header_logo.svg" alt="logo" class="header-logo">
+
+      <!-- MENU -->
       <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+        <ul class="menu">
+          <li><a href="./" aria-current="page">Forside</a></li>
+          <li><a href="./svg.html">Oplevelsen</a></li>
+          <li><a href="./form.html">Booking</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="opsamling-page">
-      <div class="opsamling-intro">
-        <h1>Opsamling</h1>
-        <p>Vis brugerens valg som et pass, en invitation eller noget andet, der passer til dit event.</p>
-        <div class="actions">
-          <a class="button" href="./form.html">Tilbage til formular</a>
-        </div>
-      </div>
 
-      <article class="opsamling-placeholder"></article>
-    </section>
+    <section class="booking">
+      <section class="data">
+        <!-- BEKRÆFTELSESKORT -->
+        <div class="bekræftelses-kort">
+
+          <!-- VENSTRE SIDE - BOOKINGBEKRÆFTELSE -->
+
+          <section>
+            <div class="opsamling-intro">
+              <h1>Tak for din booking</h1>
+              <p>
+                Din booking er bekræftet. Vi glæder os til at
+                byde dig velkommen på Høstgården.
+              </p>
+
+              <!-- TILBAGE-KNAP -->
+              <a class="booking-button" href="./index.html">
+                Tilbage til forsiden →
+              </a>
+            </div>
+
+            <!-- HØJRE SIDE - BOOKINGOVERSIGT -->
+            <div class="booking-oversigt">
+
+              <h2>Din bookingoversigt</h2>
+
+              <h3>Ophold: <span id="eventophold"></span> </h3>
+
+              <h3>Navn: <span id="navn"></span> </h3>
+
+              <h3>Telefonnummer: <span id="telefonnummer"></span></h3>
+
+              <h3>Antal voksne: <span id="antalvoksne"></span></h3>
+
+              <h3>Antal børn: <span id="antalboern"></span></h3>
+
+              <h3>Vælg dato: <span id="dato"></span></h3>
+
+            </div>
+
+          </section>
+
+      </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+
+
+
+      <!-- FOOTER LOGO OG BRANDTEKST -->
+      <div class="footer-logo">
+        <div class="footer-logo-box">
+          <img src="billeder/footer-logo.svg" alt="Høstgården logo">
+        </div>
+
+        <div class="footer-brand-text">
+          <h2>Høstgården</h2>
+          <p>En oplevelse fra jord til bord</p>
+        </div>
+      </div>
+
+
+
+      <!-- KONTAKTOPLYSNINGER -->
+      <div class="footer-kontakt">
+        <h3>Kontakt</h3>
+        <p>kontakt@hoestgaarden.dk</p>
+        <p>Telefon: 12 34 56 78</p>
+      </div>
+
+
+
+      <!-- FOOTER LINKS -->
+      <div class="footer-links">
+        <h3>Find rundt</h3>
+        <a href="#oplevelsen">Oplevelsen</a>
+        <a href="#ophold">Weekendophold</a>
+      </div>
+
     </div>
+
+
+
+    <!-- FOOTER BUND -->
+    <div class="footer-bottom">
+      <p>2026 Høstgården</p>
+    </div>
+
   </footer>
+
+
+  <!-- JAVASCRIPT -->
   <script src="./script.js"></script>
 </body>
 

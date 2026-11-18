@@ -4,42 +4,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formular | Eventnavn</title>
+  <title>Book nu</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./form.css">
 </head>
 
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <img src="billeder/header_logo.svg" alt="logo" class="header-logo">
       <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+        <ul class="menu">
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./svg.html">Oplevelsen</a></li>
+          <li><a href="./" aria-current="page">Booking</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="form-page">
-      <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
-      </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+  <main>
+    <section class="hero-forms">
+      <h1>Book din oplevelse på Høstgården</h1>
+    </section>
+
+    <section class="hele-main-forms">
+      <div class="tekst-paa-forms">
+        <h2>Dit ophold starter her</h2>
+        <p>Book dit næste ophold eller event hos os, og glæd dig til hyggelige omgivelser og gode oplevelser. Find
+          ledige
+          datoer, se vores bookingmuligheder og læs mere om praktisk information før ankomst.</p>
+        <h3>Priser: </h3>
+        <p>Priserne varierer alt efter, om du vælger kun event eller et samlet ophold med event. Der er forskellige
+          priser for voksne og børn, og prisen kan desuden variere afhængigt af den valgte dato.</p>
+        <p> Vælg derfor din ønskede oplevelse og dato for at se den aktuelle pris.
+        </p>
+      </div>
+      <div class="formularen">
+        <h2>Book her</h2>
+        <form action="./opsamling.html" method="get">
+          <fieldset>
+            <div class="formselement">
+              <legend>Vælg eventtype: </legend>
+              <label for="eventophold-1">
+                <input type="radio" id="eventophold-1" name="eventophold" value="event">
+                Event
+              </label>
+              <label for="eventophold-2">
+                <input type="radio" id="eventophold-2" name="eventophold" value="ophold">
+                Ophold + event
+              </label>
+            </div>
+          </fieldset>
+          <h3>Kontaktoplysninger</h3>
+          <div class="formselement">
+            <label for="navn">Navn:</label>
+            <input type="text" id="navn" name="navn">
+          </div>
+          <div class="formselement">
+            <label for="telefonnummer">Telefon:</label>
+            <input type="tel" id="telefonnummer" name="telefonnummer">
+          </div>
+          <h3>Antal gæster</h3>
+          <div class="formselement">
+            <label for="antalvoksne">Antal voksne:</label>
+            <select id="antalvoksne" name="antalvoksne">
+              <option value="">Vælg antal</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="formselement">
+            <label for="antalboern">Antal børn:</label>
+            <select id="antalboern" name="antalboern">
+              <option value="">Vælg antal</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <h3>Vælg dato</h3>
+          <div class="formselement">
+            <label for="dato">Dato:</label>
+            <input type="date" id="dato" name="dato">
+          </div>
+          <label for="retningslinjer">
+            <input type="checkbox" id="retningslinjer" name="retningslinjer" value="accepteret">
+            Jeg accepterer eventets retningslinjer
+          </label>
+          <label for="reklame">
+            <input type="checkbox" id="reklame" name="reklame" value="reklameja" checked>
+            Jeg vil gerne tilmelde mig Høstgårdens nyhedsbrev og modtage markedsføring
+          </label>
+          <div class="book-forms">
+            <button type="submit">Book nu</button>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+
+      <div class="footer-logo">
+        <div class="footer-logo-box">
+          <img src="billeder/footer-logo.svg" alt="Høstgården logo">
+        </div>
+
+        <div class="footer-brand-text">
+          <h2>Høstgården</h2>
+          <p>En oplevelse fra jord til bord</p>
+        </div>
+      </div>
+
+      <div class="footer-kontakt">
+        <h3>Kontakt</h3>
+        <p>kontakt@hoestgaarden.dk</p>
+        <p>Telefon: 12 34 56 78</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Find rundt</h3>
+        <a href="./svg.html">Oplevelsen</a>
+        <a href="./index.html">Weekendophold</a>
+      </div>
+
     </div>
+    <div class="footer-bottom">
+      <p>2026 Høstgården</p>
+    </div>
+
   </footer>
   <script src="./script.js"></script>
 </body>
