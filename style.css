@@ -13,7 +13,10 @@
   font-style: normal;
 }
 
-p {
+p,
+label,
+select,
+.formselement {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -36,7 +39,7 @@ html {
   /* Høstgårdens farver */
   --color-beige: #f3ebdd;
   --color-darkgreen: #303b17;
-  --color-green: #87916b;
+  --color-hovergreen: #46552a;
 
   /* Afstande */
   --space-05: 0.5rem;
@@ -168,9 +171,10 @@ main > section {
 }
 
 .aktivitet:hover {
-  border-bottom-color: var(--color-border);
+  border-bottom-color: var(--color-hovergreen);
   border-bottom: solid 1px;
   width: fit-content;
+  transform: translateY(-3px);
 }
 
 .aktivitet img {
@@ -184,12 +188,27 @@ main > section {
   margin: auto;
   padding: 2rem;
   background-color: white;
-  border: solid 2px var(--color-green);
+  border: solid 2px var(--color-hovergreen);
   border-radius: 6px;
   color: black;
   width: 400px;
   height: fit-content;
   box-shadow: 0 4px 20px #0003;
+
+  animation: popover-ind 0.3s ease-out;
+}
+
+/* FORSIDE - ANIMATION NÅR POPOVER ÅBNES */
+@keyframes popover-ind {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .luk-popover {
@@ -274,11 +293,11 @@ button[popovertarget="pop-sov"] {
   border-radius: 8px;
 }
 
-.måltid-tekst hr {
-  display: block;
-  width: 200px;
-  margin-top: 1rem;
+.måltid-tekst h2 {
+  border-bottom: 1px solid white;
+  width: fit-content;
   margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
 }
 
 /* SEKTION 4: PLANLÆG DIT BESØG INKL. MAPS  */
@@ -427,7 +446,7 @@ button[popovertarget="pop-sov"] {
 
 /* SVG - Dropdown-menuernes udseende */
 .interaktiv details {
-  border-bottom: 1px solid var(--color-green);
+  border-bottom: 1px solid var(--color-hovergreen);
   padding: 20px;
   margin-bottom: 0px;
   line-height: 2;
@@ -480,9 +499,14 @@ button[popovertarget="pop-sov"] {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
+
+.galleribilleder img:hover {
+  transform: translateY(-6px);
+}
+
 /* FORM-SIDE */
-/*FORMS FORMULAR SIDE*/
 /*FORMS - hero*/
 .hero-forms {
   background-image: url(billeder/eng.png);
@@ -522,47 +546,43 @@ button[popovertarget="pop-sov"] {
   background-color: white;
   width: 95%;
 }
-.formularen h3 {
-  margin-top: 2px;
-}
-.formularen h2 {
-  font-size: 40px;
-  margin-top: 15px;
-  margin-bottom: 8px;
-}
-.formselement {
-  margin-bottom: 5px;
-}
-
 fieldset {
   border: none;
 }
-/*FORMS - knappen book nu*/
+
+/*FORMS - formularen -> margin på tekst og felter under "book her"*/
+.formularen h2 {
+  font-size: 26px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-darkgreen);
+  width: fit-content;
+}
+
+.formularen h3,
+.formularen legend {
+  margin-bottom: 0.2rem;
+}
+
+.formselement {
+  margin-bottom: 1.5rem;
+}
+/*FORMS - knappen "book nu"*/
 .book-forms button {
-  color: white;
-  background-color: #46552a;
-  border: none;
-  padding: 20px 50px;
-  border-radius: 4px;
-  font-size: 15px;
-  transition: 0.3s;
   margin-top: 30px;
   width: 100%;
-}
-.book-forms:hover button {
-  color: #46552a;
-  background-color: white;
 }
 
 /*FORMS - teksten på formular main delen - venstre side*/
 .tekst-paa-forms {
-  margin-top: 80px;
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
   text-align: left;
 }
 .tekst-paa-forms h2 {
   margin-bottom: 10px;
   margin-top: 30px;
+  border-bottom: 1px solid var(--color-darkgreen);
+  width: fit-content;
 }
 .tekst-paa-forms h3 {
   margin-top: 50px;
@@ -571,7 +591,7 @@ fieldset {
 /*FORMS - radio og checkbox*/
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: #46552a;
+  accent-color: var(--color-darkgreen);
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
@@ -585,83 +605,91 @@ select {
 }
 
 /* OPSAMLING-SIDE */
-/* OPSAMLING - BAGGRUND OG HERO */
-.hero-opsamling {
+
+/* OPSAMLING-SIDE - HELE SEKTION, INKL. BILLEDE BAGVED OG ALT INDHOLD*/
+.booking {
   background-image: url(billeder/baggrundsbillede.png);
   background-size: cover;
   background-position: center;
-  min-height: 580px;
+  min-height: 730px;
   height: auto;
   padding: 40px 0;
   display: grid;
   place-items: center;
   position: relative;
   box-sizing: border-box;
-  margin: 0;
+  margin-bottom: 3rem;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 3%;
 }
 
 /* OPSAMLING - DEN STORE CREMEFARVEDE BOKS */
 .bekræftelses-kort {
   width: 85%;
-  max-width: 1100px;
+  max-width: 1400px;
+  min-height: 580px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 60px;
   background-color: #f4eadb;
-  border-radius: 25px;
+  box-sizing: border-box;
+
+  display: grid;
+  align-items: stretch;
+}
+
+/* OPSAMLING - DE TO KLOLONNER */
+.data {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-  box-sizing: border-box;
+  gap: 60px;
+  align-items: stretch;
 }
 
 /*OPSAMLING - VENSTRE SIDE - TAK FOR DIN BOOKING */
 .opsamling-intro {
-  position: static;
-  transform: none;
-  color: #343b22;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 450px;
 }
 
 .opsamling-intro h1 {
-  color: #343b22;
   font-size: 46px;
   text-align: left;
-  line-height: 1.1;
   margin-bottom: 20px;
 }
 
 .opsamling-intro p {
   font-size: 17px;
   line-height: 1.6;
-  color: #343b22;
   margin-bottom: 25px;
 }
 
 /*OPSAMLING - TILBAGE-KNAP */
-.booking-button {
-  display: inline-block;
-  background-color: #46552a;
-  color: white;
-  text-decoration: none;
-  padding: 14px 25px;
-  border-radius: 30px;
-  margin-top: 10px;
+.opsamling-intro .knap {
+  align-self: flex-start;
 }
-
 /*OPSAMLING - HØJRE SIDE - BOOKINGOVERSIGT */
 .booking-oversigt {
   background-color: #faf5ed;
-  padding: 30px;
-  border-radius: 15px;
+  padding: 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1px;
+
+  min-height: 460px;
 }
 
 .booking-oversigt h2 {
-  font-size: 28px;
+  font-size: 26px;
+  border-bottom: solid 1px var(--color-darkgreen);
+  width: fit-content;
+  font-weight: normal;
   margin-bottom: 20px;
-  color: #343b22;
 }
 
 /*OPSAMLING - BOOKINGOPLYSNINGER */
@@ -676,26 +704,7 @@ select {
   align-items: center;
   gap: 15px;
   padding: 15px 0;
-  border-bottom: 1px solid #ded4c5;
-}
-
-.booking-item h3 {
-  font-size: 16px;
-  font-weight: normal;
-  color: #343b22;
-  margin: 0;
-}
-
-.booking-item p {
-  font-size: 16px;
-  color: #343b22;
-  margin: 0;
-  text-align: right;
-}
-/*OPSAMLING - SKRIFTTYPE PÅ BOOKINGOPLYSNINGER */
-.booking-item h3,
-.booking-item p {
-  font-family: "Montserrat", sans-serif;
+  border-bottom: 1px solid #a06713;
 }
 
 /* 404-SIDE */
@@ -800,7 +809,7 @@ select {
 /* FOOTER */
 
 .site-footer {
-  background-color: var(--color-green);
+  background-color: var(--color-hovergreen);
   color: white;
   padding: 3rem 6% 1.5rem;
   display: grid;
@@ -871,7 +880,9 @@ select {
   border-radius: 6px;
   text-decoration: none;
   margin-top: 1rem;
+  transition: 0.3s ease;
 }
 .knap:hover {
   background-color: #46552a;
+  transform: translateY(-3px);
 }
