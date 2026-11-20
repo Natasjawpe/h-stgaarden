@@ -77,7 +77,7 @@ main > section {
 
 /* HERO-SEKTION */
 .hero {
-  background-image: url(billeder/herobillede2.png);
+  background-image: url(billeder/herobilledeforsøg.png);
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -265,8 +265,8 @@ button[popovertarget="pop-sov"] {
   position-area: top;
 }
 
+/* SEKTION 3*/
 /* SEKTION 3: MERE END BARE ET MÅLTID */
-
 .måltid {
   background-image: url("billeder/langbord.png");
   background-size: cover;
